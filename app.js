@@ -103,6 +103,7 @@ app.get('/myprojects',
       if (results) {
         projects = results.map(function(result) {
           var url = result.url;
+console.log(result.rawTags, result.userTags, result.appTags);
           return {
             title: result.title || url,
             edit: url + "/edit",
